@@ -11,8 +11,6 @@
 
 body { cursor: default; }
 
-h2 { border-right: 20px solid #ccc; }
-
 span.obs { font-family: "Verdana"; font-size: 14px; color: red; }
 
 pre
