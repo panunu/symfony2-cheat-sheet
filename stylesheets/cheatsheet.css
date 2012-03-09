@@ -1,0 +1,17 @@
+.left  { float: left;  }
+.right { float: right; }
+
+.justify { text-align: justify; }
+.center  { text-align: center;  }
+
+.uppercase { text-transform: uppercase; }
+
+
+/* Global elements */
+
+h2 { border-right: 20px solid #ccc; }
+
+
+/* Specific elements */
+
+#header { margin-top: 20%; margin-bottom: 20%; clear: both; }
