@@ -28,8 +28,9 @@ pre
 }
 
 ol li { margin-bottom: 20px; }
+ul li { margin: 0px; line-height: 13px;}
 
-.row { margin-bottom: 40px; }
+.row { margin-bottom: 20px; }
 
 /* Specific elements */
 
@@ -57,7 +58,4 @@ ol li { margin-bottom: 20px; }
     #footer { text-align: left; }
     
     #print { display: none; }
-            
-    div.row { page-break-after: always; page-break-inside: avoid; }
-        div.row:last-child { page-break-after: avoid !important; }
 }
