@@ -295,7 +295,7 @@ your_route:
 {% block title %}Your title goes here{% endblock %}
 
 {% block content %}
-    &lt;a href="{{ url( 'your_route', { 'id': 1 } ) }}"&gt; link &lt;/a&gt;
+    &lt;a href="{{ url( 'your_route', { 'id': 1 } ) }}"&gt; {{ variable }} &lt;/a&gt;
     {% include 'AppYourBundle:Your:view.html.twig' with { 'param': 1 } %}
 {% endblock %}
 </pre>
