@@ -29,16 +29,26 @@ pre
 
 ol li { margin-bottom: 20px; }
 
+
 /* Specific elements */
 
-#header { margin-top: 20%; margin-bottom: 20%; clear: both; }
+#header 
+{
+    clear: both;
+    
+    margin-top:    20%;
+    margin-bottom: 20%;
+}
 
 
 /* Print */
 
 @media print
 {
-    #header { margin-top: 0px; margin-bottom: 20px; }
-        #header h1 { margin-bottom: 0px; float: left; font-size: 32px; }
+    #header { margin-top: 0px; margin-bottom: 30px; }
+        #header h1      { float: left; margin-bottom: 0px;  font-size: 32px; }
         #header #author { float: left; margin: 20px 0px 0px 15px; }
+        #header img     { float: right; margin-top: -15px; }
+        
+    #footer { text-align: left; }
 }
