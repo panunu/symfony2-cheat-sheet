@@ -8,8 +8,8 @@
         <!-- Basic Page Needs
     ================================================== -->
         <meta charset="utf-8">
-        <title>Symfony2 - Introductory cheat sheet</title>
-        <meta name="description" content="An introductory cheat sheet to Symfony2. Contains an example of Bundle structure and configuration.">
+        <title>An unofficial introductory cheat sheet to Symfony2</title>
+        <meta name="description" content="An unofficial introductory cheat sheet to Symfony2. Contains an example of Bundle structure and configuration.">
         <meta name="author" content="Panu Leppäniemi">
 
         <!-- Mobile Specific Metas
@@ -45,18 +45,18 @@
         <div class="container">
             <div id="header" class="sixteen columns alpha omega">
                 <h1 class="center">An introductory cheat sheet to Symfony2</h1>
-                <div class="center">by Panu Leppäniemi</div>
+                <div id="author" class="center">by Panu Leppäniemi</div>
             </div>
             
-            <div class="eight columns alpha">
-                <h2>(Your)Bundle structure</h2>
+            <div class="eight columns alpha add-bottom">
+                <h2>(User)Bundle structure</h2>
                 
                 <ul class="circle">
                     <li>
                         Controller
                         
                         <ul>
-                            <li>YourController.php</li>
+                            <li>UserController.php</li>
                         </ul>
                     </li>
                     
@@ -64,7 +64,7 @@
                         DependencyInjection
                         
                         <ul>
-                            <li>AppYourExtension.php</li>
+                            <li>AppUserExtension.php</li>
                         </ul>
                     </li>
                     
@@ -72,48 +72,137 @@
                         Entity
                         
                         <ul>
-                            <li>User.php</li>
+                            <li>User.php <span class="obs">*</span></li>
                         </ul>
                     </li>
                     
                     <li>
                         Form
                         
-                        <ul>
+                        <ul class="circle">
                             <li>
                                 Type
+                                
+                                <ul>
+                                    <li>UserType.php <span class="obs">*</span></li>
+                                </ul>
                             </li>
                         </ul>
                     </li>
                     
                     <li>
-                        Model
-                    </li>
-                    
-                    <li>
                         Repository
+                        
+                        <ul>
+                            <li>UserRepository.php<span class="obs">*</span></li>
+                        </ul>
                     </li>
                     
                     <li>
                         Resources
+                        
+                        <ul class="circle">
+                            <li>
+                                coffee
+                                
+                                <ul class="circle">
+                                    <li>
+                                        User.coffee
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                config
+                                
+                                <ul>
+                                    <li>routing.yml</li>
+                                    <li>services.yml</li>
+                                </ul>                            
+                            </li>
+                            
+                            <li>
+                                translations
+                                
+                                <ul>
+                                    <li>messages.fi.yml</li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                views
+                                
+                                <ul class="circle">
+                                    <li>
+                                        User
+                                        
+                                        <ul>
+                                            <li>view.html.twig</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                     
                     <li>
                         Service
+                        
+                        <ul>
+                            <li>UserService.php</li>
+                        </ul>
                     </li>
                     
                     <li>
                         Tests
+                        
+                        <ul class="circle">
+                            <li>
+                                Service
+
+                                <ul>
+                                    <li>
+                                        UserServiceTest.php
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li>...</li>
+                        </ul>
                     </li>
                     
                     <li>
                         Twig
+                        
+                        <ul class="circle">
+                            <li>
+                                Extensions
+                                
+                                <ul class="circle">
+                                    <li>
+                                        Extension
+                                        
+                                        <ul>
+                                            <li>Profile.php</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
+                
+                <small><span class="obs">*</span> Entity & Form, Entity & Repository are linked together.</small>
             </div>
             
-            <div class="eight columns alpha">
-                <h2>Trololoo</h2>
+            <div class="eight columns alpha add-bottom">
+                <h2>Bundle configuration</h2>
+            </div>
+            
+            <div class="sixteen columns add-bottom">&nbsp;</div>
+            
+            <div class="sixteen columns alpha omega center">
+                <small>This cheat sheet is not a part of the official Symfony2 documentation.</small>
             </div>
         </div>
 
