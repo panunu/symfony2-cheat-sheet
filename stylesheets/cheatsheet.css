@@ -59,4 +59,5 @@ ol li { margin-bottom: 20px; }
     #print { display: none; }
             
     div.row { page-break-after: always; page-break-inside: avoid; }
+        div.row:last-child { page-break-after: avoid !important; }
 }

@@ -22,6 +22,9 @@
         <link rel="stylesheet" href="stylesheets/skeleton.css">
         <link rel="stylesheet" href="stylesheets/layout.css">
         <link rel="stylesheet" href="stylesheets/cheatsheet.css">
+        <link rel="stylesheet" href="stylesheets/prettify.css" type="text/css" />
+        
+        <script src="javascripts/prettify/prettify.js"></script>
 
         <!--[if lt IE 9]>
                 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -35,7 +38,7 @@
         <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 
     </head>
-    <body>
+    <body onload="prettyPrint()">
 
 
 
@@ -210,7 +213,7 @@
                         <li>
                     Add your Bundle to <strong>app/AppKernel.php</strong>
 
-<pre>
+<pre class="prettyprint">
 $bundles = array(
     new App\YourBundle\AppYourBundle.php()
 );
@@ -219,14 +222,14 @@ $bundles = array(
                         <li>
                     If you use routing.yml in your Bundle, add the following to <strong>app/config/routing.yml</strong>
 
-<pre>
+<pre class="prettyprint">
 AppYourBundle:
     resource: "@AppYourBundle/Resources/config/routing.yml"
 </pre>
                         </li>
                         <li>
                             Configure Dependency Injection Container in <strong>App/YourBundle/DependencyInjection/AppYourExtension.php</strong>
-<pre>
+<pre class="prettyprint">
 $loader = new Loader\YamlFileLoader(
     $container, new FileLocator(__DIR__ . '/../Resources/config')
 );
@@ -236,7 +239,7 @@ $loader->load('services.yml');
                     </li>
                     <li>
                 Add your Services to <strong>App/YourBundle/Resources/config/services.yml</strong>
-<pre>
+<pre class="prettyprint">
 services:
     app_your.service.your_service:
         class:     App\YourBundle\Service\YourService
@@ -255,9 +258,9 @@ services:
                 <div class="eight columns alpha add-bottom">
                     <h2>Controller</h2>
 
-                    Controller should always return a Response.
+                    Controller should always <strong>return a Response object</strong> by e.g. rendering a template, forwarding or redirecting.
 
-<pre>
+<pre class="prettyprint">
 namespace App\YourBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -278,11 +281,25 @@ class YourController extends Controller
                     <h2>Routing</h2>
 
                     Add your routes to <strong>AppYourBundle/Resources/config/routing.yml</strong>
-<pre>
+<pre class="prettyprint">
 your_route:
     pattern:  /this-is-your-route/{id}
     defaults: { _controller: AppYourBundle:Controller:action, id: 1 }
 </pre>
+                    <br/>
+                    
+                    <h2>View / Twig</h2>
+
+<pre class="prettyprint">
+{% extends 'AppYourBundle::layout.html.twig' %}
+{% block title %}Your title goes here{% endblock %}
+
+{% block content %}
+    &lt;a href="{{ url( 'your_route', { 'id': 1 } ) }}"&gt; link &lt;/a&gt;
+    {% include 'AppYourBundle:Your:view.html.twig' with { 'param': 1 } %}
+{% endblock %}
+</pre>
+                    
                 </div>
                 
                 <div id="footer" class="sixteen columns alpha omega center">
