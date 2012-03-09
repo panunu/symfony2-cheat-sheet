@@ -17,9 +17,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
         <!-- CSS
-    ================================================== -->
-        <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
-        
+    ================================================== -->        
         <link rel="stylesheet" href="stylesheets/base.css">
         <link rel="stylesheet" href="stylesheets/skeleton.css">
         <link rel="stylesheet" href="stylesheets/layout.css">
@@ -57,176 +55,177 @@
                 </a>
             </div>
             
-            <div class="eight columns alpha add-bottom">
-                <h2>(Your)Bundle structure</h2>
-                
-                <ul class="circle">
-                    <li>
-                        Controller
-                        
-                        <ul>
-                            <li>UserController.php</li>
-                        </ul>
-                    </li>
-                    
-                    <li>
-                        DependencyInjection
-                        
-                        <ul>
-                            <li>AppYourExtension.php</li>
-                        </ul>
-                    </li>
-                    
-                    <li>
-                        Entity
-                        
-                        <ul>
-                            <li>User.php <span class="obs">*</span></li>
-                        </ul>
-                    </li>
-                    
-                    <li>
-                        Form
-                        
-                        <ul class="circle">
-                            <li>
-                                Type
-                                
-                                <ul>
-                                    <li>UserType.php <span class="obs">*</span></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                    <li>
-                        Repository
-                        
-                        <ul>
-                            <li>UserRepository.php<span class="obs">*</span></li>
-                        </ul>
-                    </li>
-                    
-                    <li>
-                        Resources
-                        
-                        <ul class="circle">
-                            <li>
-                                coffee
-                                
-                                <ul class="circle">
-                                    <li>
-                                        User.coffee
-                                    </li>
-                                </ul>
-                            </li>
-                            
-                            <li>
-                                config
-                                
-                                <ul>
-                                    <li>routing.yml</li>
-                                    <li>services.yml</li>
-                                </ul>                            
-                            </li>
-                            
-                            <li>
-                                translations
-                                
-                                <ul>
-                                    <li>messages.fi.yml</li>
-                                </ul>
-                            </li>
-                            
-                            <li>
-                                views
-                                
-                                <ul class="circle">
-                                    <li>
-                                        User
-                                        
-                                        <ul>
-                                            <li>view.html.twig</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                    <li>
-                        Service
-                        
-                        <ul>
-                            <li>UserService.php</li>
-                        </ul>
-                    </li>
-                    
-                    <li>
-                        Tests
-                        
-                        <ul class="circle">
-                            <li>
-                                Service
+            <div class="row">
+                <div class="eight columns alpha add-bottom">
+                    <h2>(Your)Bundle structure</h2>
 
-                                <ul>
-                                    <li>
-                                        UserServiceTest.php
-                                    </li>
-                                </ul>
-                            </li>
-                            
-                            <li>...</li>
-                        </ul>
-                    </li>
-                    
-                    <li>
-                        Twig
-                        
-                        <ul class="circle">
-                            <li>
-                                Extensions
-                                
-                                <ul class="circle">
-                                    <li>
-                                        Extension
-                                        
-                                        <ul>
-                                            <li>Profile.php</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                
-                <small><span class="obs">*</span> Entity & Form, Entity & Repository are linked together.</small>
-            </div>
-            
-            <div class="eight columns alpha add-bottom">
-                <h2>Bundle configuration</h2>
-                
-                <ol>
-                    <li>
-                Add your Bundle to <strong>app/AppKernel.php</strong>
-                
+                    <ul class="circle">
+                        <li>
+                            Controller
+
+                            <ul>
+                                <li>UserController.php</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            DependencyInjection
+
+                            <ul>
+                                <li>AppYourExtension.php</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            Entity
+
+                            <ul>
+                                <li>User.php <span class="obs">*</span></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            Form
+
+                            <ul class="circle">
+                                <li>
+                                    Type
+
+                                    <ul>
+                                        <li>UserType.php <span class="obs">*</span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            Repository
+
+                            <ul>
+                                <li>UserRepository.php<span class="obs">*</span></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            Resources
+
+                            <ul class="circle">
+                                <li>
+                                    coffee
+
+                                    <ul class="circle">
+                                        <li>
+                                            User.coffee
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    config
+
+                                    <ul>
+                                        <li>routing.yml</li>
+                                        <li>services.yml</li>
+                                    </ul>                            
+                                </li>
+
+                                <li>
+                                    translations
+
+                                    <ul>
+                                        <li>messages.fi.yml</li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    views
+
+                                    <ul class="circle">
+                                        <li>
+                                            User
+
+                                            <ul>
+                                                <li>view.html.twig</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            Service
+
+                            <ul>
+                                <li>UserService.php</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            Tests
+
+                            <ul class="circle">
+                                <li>
+                                    Service
+
+                                    <ul>
+                                        <li>
+                                            UserServiceTest.php
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>...</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            Twig
+
+                            <ul class="circle">
+                                <li>
+                                    Extensions
+
+                                    <ul class="circle">
+                                        <li>
+                                            Extension
+
+                                            <ul>
+                                                <li>Profile.php</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <small><span class="obs">*</span> Entity & Form, Entity & Repository are linked together.</small>
+                </div>
+
+                <div class="eight columns alpha add-bottom">
+                    <h2>Bundle configuration</h2>
+
+                    <ol>
+                        <li>
+                    Add your Bundle to <strong>app/AppKernel.php</strong>
+
 <pre>
 $bundles = array(
     new App\YourBundle\AppYourBundle.php()
 );
 </pre>
-                    </li>
-                    <li>
-                If you use routing.yml in your Bundle, add the following to <strong>app/config/routing.yml</strong>
+                        </li>
+                        <li>
+                    If you use routing.yml in your Bundle, add the following to <strong>app/config/routing.yml</strong>
 
 <pre>
 AppYourBundle:
     resource: "@AppYourBundle/Resources/config/routing.yml"
 </pre>
-                    </li>
-                    <li>
-                        Configure Dependency Injection Container in <strong>App/YourBundle/DependencyInjection/AppYourExtension.php</strong>
+                        </li>
+                        <li>
+                            Configure Dependency Injection Container in <strong>App/YourBundle/DependencyInjection/AppYourExtension.php</strong>
 <pre>
 $loader = new Loader\YamlFileLoader(
     $container, new FileLocator(__DIR__ . '/../Resources/config')
@@ -243,18 +242,52 @@ services:
         class:     App\YourBundle\Service\YourService
         arguments: ["@doctrine.orm.entity_manager"]
 </pre>
-                    </li>
-                    
-                    <li>
-                        Remember to clear your cache. Run <strong>php app/console cache:clear</strong>
-                    </li>
-                </ol>
+                        </li>
+
+                        <li>
+                            Remember to clear your cache. Run <strong>php app/console cache:clear</strong>
+                        </li>
+                    </ol>
+                </div>
             </div>
-                        
-            <div class="sixteen columns add-bottom">&nbsp;</div>
             
-            <div id="footer" class="sixteen columns alpha omega center">
-                <small>This cheat sheet is not a part of the official Symfony2 documentation. Fork me on <a href="https://github.com/panunu/symfony2-cheat-sheet">Github.com</a></small>
+            <div class="row">
+                <div class="eight columns alpha add-bottom">
+                    <h2>Controller</h2>
+
+                    Controller should always return a Response.
+
+<pre>
+namespace App\YourBundle\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+class YourController extends Controller
+{
+    public function viewAction($id)
+    {
+        return $this->render('AppYourBundle:Your:view.html.twig',
+            array('id' => $id)
+        );
+    }
+}
+</pre>
+
+                </div>
+
+                <div class="eight columns omega add-bottom">
+                    <h2>Routing</h2>
+
+                    Add your routes to <strong>AppYourBundle/Resources/config/routing.yml</strong>
+<pre>
+your_route:
+    pattern:  /this-is-your-route/{id}
+    defaults: { _controller: AppYourBundle:Controller:action, id: 1 }
+</pre>
+                </div>
+                
+                <div id="footer" class="sixteen columns alpha omega center">
+                    <small>This cheat sheet is not a part of the official Symfony2 documentation. Fork me on <a href="https://github.com/panunu/symfony2-cheat-sheet">Github.com</a></small>
+                </div>
             </div>
         </div>
 
