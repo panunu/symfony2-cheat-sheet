@@ -11,7 +11,18 @@
 
 h2 { border-right: 20px solid #ccc; }
 
+span.obs { font-family: "Verdana"; color: red; font-size: 14px; }
 
 /* Specific elements */
 
 #header { margin-top: 20%; margin-bottom: 20%; clear: both; }
+
+
+/* Print */
+
+@media print
+{
+    #header { margin-top: 0px; margin-bottom: 20px; }
+        #header h1 { margin-bottom: 0px; float: left; font-size: 32px; }
+        #header #author { float: left; margin: 20px 0px 0px 15px; }
+}
