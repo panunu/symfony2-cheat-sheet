@@ -197,6 +197,45 @@
             
             <div class="eight columns alpha add-bottom">
                 <h2>Bundle configuration</h2>
+                
+                <ol>
+                    <li>
+                Add your bundle to <strong>app/AppKernel.php</strong>
+                
+<pre>
+$bundles = array(
+    new App\YourBundle\AppYourBundle.php()
+);
+</pre>
+                    </li>
+                    <li>
+                If you use routing.yml in your Bundle, add the following to <strong>app/config/routing.yml</strong>
+
+<pre>
+AppYourBundle:
+    resource: "@AppYourBundle/Resources/config/routing.yml"
+</pre>
+                    </li>
+                    <li>
+                        Configure Dependency Injection Container in <strong>App/YourBundle/DependencyInjection/AppYourExtension.php</strong>
+<pre>
+$loader = new Loader\YamlFileLoader(
+    $container, new FileLocator(__DIR__ . '/../Resources/config')
+);
+
+$loader->load('services.yml');
+</pre>
+                    </li>
+                    <li>
+                Add your Services to <strong>App/YourBundle/Resources/config/services.yml</strong>
+<pre>
+services:
+    app_your.service.your_service:
+        class:     App\YourBundle\Service\YourService
+        arguments: ["@doctrine.orm.entity_manager"]
+</pre>
+                
+                    </li>
             </div>
             
             <div class="sixteen columns add-bottom">&nbsp;</div>

@@ -9,9 +9,25 @@
 
 /* Global elements */
 
+body { cursor: default; }
+
 h2 { border-right: 20px solid #ccc; }
 
-span.obs { font-family: "Verdana"; color: red; font-size: 14px; }
+span.obs { font-family: "Verdana"; font-size: 14px; color: red; }
+
+pre
+{
+    margin-top: 5px;
+    padding:    5px;
+    
+    background-color: #f1f1f1;
+    
+    border-radius: 4px;
+    
+    cursor: text;
+}
+
+ol li { margin-bottom: 20px; }
 
 /* Specific elements */
 
