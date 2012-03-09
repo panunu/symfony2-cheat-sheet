@@ -16,7 +16,9 @@ span.obs { font-family: "Verdana"; font-size: 14px; color: red; }
 pre
 {
     margin-top: 5px;
-    padding:    5px;
+    padding:    5px 3px 5px 3px;
+    
+    font-size: 13px;
     
     background-color: #f1f1f1;
         
@@ -27,7 +29,7 @@ pre
 
 ol li { margin-bottom: 20px; }
 
-hr { float: left; width: 100%; clear: both; margin: 20px 0px 20px 0px; }
+.row { margin-bottom: 40px; }
 
 /* Specific elements */
 
@@ -35,9 +37,11 @@ hr { float: left; width: 100%; clear: both; margin: 20px 0px 20px 0px; }
 {
     clear: both;
     
-    margin-top:    20%;
-    margin-bottom: 20%;
+    margin-top:    25%;
+    margin-bottom: 40%;
 }
+
+#footer { margin-top: 10px; }
 
 #print { position: fixed; top: -4px; right: 10px; z-index: 1; opacity: 0.9; }
 
@@ -47,12 +51,12 @@ hr { float: left; width: 100%; clear: both; margin: 20px 0px 20px 0px; }
 {
     #header { margin-top: 0px; margin-bottom: 30px; }
         #header h1      { float: left; margin-bottom: 0px;  font-size: 32px; }
-        #header #author { float: left; margin: 20px 0px 0px 15px; }
+        #header #author { float: left; margin: 21px 0px 0px 15px; }
         #header img     { float: right; margin-top: -15px; }
         
     #footer { text-align: left; }
     
     #print { display: none; }
-    
-    hr { margin: 0px; page-break-after: always !important; }
+            
+    div.row { page-break-after: always; page-break-inside: avoid; }
 }
