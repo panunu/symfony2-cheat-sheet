@@ -27,6 +27,7 @@ pre
 
 ol li { margin-bottom: 20px; }
 
+hr { float: left; width: 100%; clear: both; margin: 20px 0px 20px 0px; }
 
 /* Specific elements */
 
@@ -38,6 +39,7 @@ ol li { margin-bottom: 20px; }
     margin-bottom: 20%;
 }
 
+#print { position: fixed; top: 10px; right: 10px; }
 
 /* Print */
 
@@ -49,4 +51,8 @@ ol li { margin-bottom: 20px; }
         #header img     { float: right; margin-top: -15px; }
         
     #footer { text-align: left; }
+    
+    #print { display: none; }
+    
+    hr { margin: 0px; page-break-after: always !important; }
 }
